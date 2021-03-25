@@ -21,7 +21,7 @@ class StateExample extends Component {
   render() {
     return (
       <div>
-        Hello the current temp is {this.state.currentTemp} in{' '}
+        Hello the current temp is {this.state.currentTemp} - in{' '}
         {this.state.location}
         <button onClick={this.handleClick}>Click Me To Change Temp</button>
       </div>
