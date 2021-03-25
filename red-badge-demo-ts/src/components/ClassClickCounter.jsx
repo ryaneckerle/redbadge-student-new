@@ -7,10 +7,14 @@ class FunctionalClickCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countValue: props.initialValue,
+      countValue: this.props.initialValue,
     };
     this.handleClick = this.handleClick.bind(this);
   }
+
+  // handleClick = () => {
+  //   this.setState({ countValue: this.state.countValue - 1 });
+  // }
 
   handleClick() {
     this.setState({ countValue: this.state.countValue - 1 });
