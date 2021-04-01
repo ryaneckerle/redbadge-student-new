@@ -1,6 +1,10 @@
 import React from "react";
 import { Container, UncontrolledCarousel } from "reactstrap";
 
+interface MainPageProps {
+  title: string;
+}
+
 const items = [
   {
     src:
@@ -28,7 +32,7 @@ const items = [
   },
 ];
 
-const MainPage = () => {
+const MainPage = (props: MainPageProps) => {
   return (
     <Container>
       <UncontrolledCarousel items={items} />

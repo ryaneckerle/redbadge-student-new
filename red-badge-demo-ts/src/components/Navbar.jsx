@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -7,7 +8,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from "reactstrap";
+} from 'reactstrap';
 
 const SiteBar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -24,12 +25,14 @@ const SiteBar = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <Link to="/contact" onClick={toggleNavbar}>
+                <NavLink>Contact Us</NavLink>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
+              <Link to="/store" onClick={toggleNavbar}>
+                <NavLink>store</NavLink>
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
